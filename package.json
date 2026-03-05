@@ -1,0 +1,50 @@
+{
+  "name": "@elizaos/plugin-opportunity",
+  "version": "0.1.0",
+  "description": "Opportunity situation evaluator for ElizaOS agents - detects and assesses actionable opportunities",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "packageType": "plugin",
+  "platform": "node",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "bun test"
+  },
+  "dependencies": {
+    "@elizaos/core": "workspace:*",
+    "@elizaos/plugin-appraisal": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "tsup": "^8.4.0",
+    "typescript": "^5.6.3"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "package.json"
+  ],
+  "keywords": [
+    "eliza",
+    "elizaos",
+    "plugin",
+    "opportunity",
+    "detection",
+    "evaluator"
+  ],
+  "author": "ElizaOS",
+  "license": "MIT"
+}
+
